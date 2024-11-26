@@ -1,20 +1,19 @@
 package br.lpm;
 
-import br.lpm.business.Boi;
-import br.lpm.business.ProteinaExtra;
-import br.lpm.business.Ramen;
-import br.lpm.business.RamenDecorator;
-import br.lpm.business.RamenGrande;
-import br.lpm.business.RamenMedio;
+import java.util.Arrays;
+import java.util.List;
+import br.lpm.fabrica.FactoryPedido;
+import br.lpm.items.MenuItem;
 
 public class Main {
-    public static void main(String args[]) {
-      Ramen meuRamen = new RamenMedio();
-      System.out.println("Preço Total: R$ " + meuRamen.getPreco());
-      meuRamen = new Boi(meuRamen);
-      meuRamen = new ProteinaExtra(meuRamen);
+  public static void main(String args[]) {
+    String tipo = "combo ramen grande e o-cha";
+    List<String> acrescimos = Arrays.asList("proteina extra", "creme alho", "tofu");
 
-      System.out.println("Preço Total: R$ " + meuRamen.getPreco());
-    }
+    MenuItem pedido = FactoryPedido.criarPedido(tipo, acrescimos);
+
+    System.out.println("Pedido: " + pedido.getDescricao());
+    System.out.println("Preço final: " + pedido.getPreco());
+  }
 
 }
