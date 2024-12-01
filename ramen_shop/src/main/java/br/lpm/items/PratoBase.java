@@ -1,7 +1,5 @@
 package br.lpm.items;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public abstract class PratoBase implements Prato{
     
@@ -12,7 +10,7 @@ public abstract class PratoBase implements Prato{
 
 
 
-    public PratoBase(String descricao, Double preco, Tamanho tamanho) {
+    protected PratoBase(String descricao, Double preco, Tamanho tamanho) {
         this.descricao = descricao;
         this.preco = precoBase[tamanho.getValue()];
         this.tamanho = tamanho;
@@ -27,5 +25,8 @@ public abstract class PratoBase implements Prato{
     public double getPreco(){
         return this.preco;
     }
-
+    
+    public Tamanho getTamanho(){
+        return this.tamanho;
+    }
 }
