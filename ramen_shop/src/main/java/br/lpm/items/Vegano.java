@@ -2,7 +2,7 @@ package br.lpm.items;
 
 public class Vegano extends PratoBase{
 
-    public Vegano(String descricao, Double preco, Tamanho tamanho){
+    public Vegano(String descricao, double preco, Tamanho tamanho){
         super(descricao,preco,tamanho);
     }
 

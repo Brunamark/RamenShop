@@ -1,7 +1,7 @@
 package br.lpm.items;
 
 public class Porco extends PratoBase{
-    public Porco(String descricao, Double preco, Tamanho tamanho){
+    public Porco(String descricao, double preco, Tamanho tamanho){
         super(descricao,preco,tamanho);
     }
 
