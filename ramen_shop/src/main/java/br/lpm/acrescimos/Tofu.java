@@ -1,11 +1,11 @@
 package br.lpm.acrescimos;
 
-import br.lpm.items.MenuItem;
+import br.lpm.items.Prato;
 
-public class Tofu extends AcrescimoDecorator {
+public class Tofu extends Acrescimo {
 
-    public Tofu(MenuItem menuItem){
-        super(menuItem);
+    public Tofu(Prato prato){
+        super(prato);
     }
     @Override
     public String getDescricao(){
@@ -13,7 +13,7 @@ public class Tofu extends AcrescimoDecorator {
     }
 
     @Override
-    public Double getPreco(){
+    public double getPreco(){
         return super.getPreco() + 2.7;
     }
 }

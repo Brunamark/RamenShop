@@ -1,11 +1,11 @@
 package br.lpm.acrescimos;
 
-import br.lpm.items.MenuItem;
+import br.lpm.items.Prato;
 
-public class ProteinaBoi extends AcrescimoDecorator {
+public class ProteinaBoi extends Acrescimo {
 
-    public ProteinaBoi(MenuItem menuItem) {
-        super(menuItem);
+    public ProteinaBoi(Prato prato) {
+        super(prato);
     }
 
     @Override
@@ -14,7 +14,7 @@ public class ProteinaBoi extends AcrescimoDecorator {
     }
 
     @Override
-    public Double getPreco() {
+    public double getPreco() {
         return super.getPreco() + 7.9;
     }
 }

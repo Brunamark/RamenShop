@@ -1,10 +1,10 @@
 package br.lpm.acrescimos;
 
-import br.lpm.items.MenuItem;
+import br.lpm.items.Prato;
 
-public class Shitake extends AcrescimoDecorator {
-    public Shitake(MenuItem menuItem){
-        super(menuItem);
+public class Shitake extends Acrescimo {
+    public Shitake(Prato prato){
+        super(prato);
     }
 
     @Override
@@ -13,7 +13,7 @@ public class Shitake extends AcrescimoDecorator {
     }
 
     @Override
-    public Double getPreco(){
+    public double getPreco(){
         return super.getPreco() + 6.9;
     }
 }

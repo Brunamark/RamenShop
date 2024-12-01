@@ -1,0 +1,103 @@
+<diagram program="umletino" version="15.1"><zoom_level>11</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>275</x><y>252</y><w>231</w><h>143</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+PratoBase
+--
+-precoBase: float[]
+-descricao: String
+- preco: float
+--
++ getDescricao(): String
++ getPreco(): float
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>693</x><y>65</y><w>231</w><h>110</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+Prato
+--
+--
++ getDescricao(): String
++ getPreco(): float
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>704</x><y>285</y><w>231</w><h>165</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+Acrescimo
+--
+- prato: Prato
+--
++ getDescricao(): String
++ getPreco(): float
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>814</x><y>164</y><w>33</w><h>143</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>374</x><y>164</y><w>385</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>330;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>572</x><y>538</y><w>231</w><h>143</h></coordinates><panel_attributes>
+ProteinaExtra	
+--
+
+--
+
++ getDescricao(): String
++ getPreco(): float
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>627</x><y>439</y><w>165</w><h>121</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>130;10;10;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>924</x><y>571</y><w>231</w><h>143</h></coordinates><panel_attributes>
+CremeAlho		
+--
+
+--
+
++ getDescricao(): String
++ getPreco(): float
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>902</x><y>439</y><w>99</w><h>154</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;70;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>704</x><y>769</y><w>231</w><h>143</h></coordinates><panel_attributes>
+Shitake
+--
+
+--
+
++ getDescricao(): String
++ getPreco(): float
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>803</x><y>439</y><w>99</w><h>352</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>70;10;10;300</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1188</x><y>560</y><w>231</w><h>143</h></coordinates><panel_attributes>
+Chilli
+--
+
+--
+
++ getDescricao(): String
++ getPreco(): float
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>924</x><y>439</y><w>385</w><h>143</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;330;110</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1133</x><y>175</y><w>231</w><h>143</h></coordinates><panel_attributes>
+Croutons
+--
+
+--
+
++ getDescricao(): String
++ getPreco(): float
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>924</x><y>208</y><w>231</w><h>176</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;140;190;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1166</x><y>340</y><w>231</w><h>143</h></coordinates><panel_attributes>
+Tofu
+--
+
+--
+
++ getDescricao(): String
++ getPreco(): float
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>924</x><y>362</y><w>264</w><h>77</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;50;220;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>154</x><y>43</y><w>165</w><h>121</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+Tamanho
+--
++ P = 0
++ M = 1
++ G = 2</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>198</x><y>153</y><w>99</w><h>176</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=1</panel_attributes><additional_attributes>70;140;10;140;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>285</y><w>165</w><h>99</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+Bebida
+--
+-preco: float
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>154</x><y>340</y><w>143</w><h>44</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=0...1</panel_attributes><additional_attributes>110;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>11</x><y>483</y><w>231</w><h>121</h></coordinates><panel_attributes>
+Porco
+--
+--
++ getDescricao(): String
++ getPreco(): float
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>99</x><y>648</y><w>231</w><h>121</h></coordinates><panel_attributes>
+Boi
+--
+--
++ getDescricao(): String
++ getPreco(): float
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>352</x><y>736</y><w>231</w><h>121</h></coordinates><panel_attributes>
+Vegano
+--
+--
++ getDescricao(): String
++ getPreco(): float
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>165</x><y>384</y><w>165</w><h>121</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>130;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>253</x><y>384</y><w>143</w><h>286</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>110;10;10;240</additional_attributes></element><element><id>Relation</id><coordinates><x>418</x><y>384</y><w>77</w><h>374</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;50;320</additional_attributes></element></diagram>
