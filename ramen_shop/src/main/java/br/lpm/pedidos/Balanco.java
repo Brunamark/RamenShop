@@ -41,6 +41,7 @@ public class Balanco {
         int quantidade = getQuantidade();
         double receitaTotal = getReceitaTotal();
         
+        // Evita divisão por zero
         if (quantidade == 0) {
             return 0.0;
         }

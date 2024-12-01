@@ -10,7 +10,7 @@ public abstract class PratoBase implements Prato{
 
 
 
-    protected PratoBase(String descricao, double preco, Tamanho tamanho) {
+    protected PratoBase(String descricao, Tamanho tamanho) {
         this.descricao = descricao;
         this.preco = precoBase[tamanho.getValue()];
         this.tamanho = tamanho;

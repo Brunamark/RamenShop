@@ -2,8 +2,8 @@ package br.lpm.items;
 
 public class Boi extends PratoBase{
     
-    public Boi(String descricao, double preco, Tamanho tamanho){
-        super(descricao,preco,tamanho);
+    public Boi(String descricao, Tamanho tamanho){
+        super(descricao,tamanho);
     }
 
     @Override
