@@ -1,6 +1,5 @@
 package br.lpm.pedidos;
 
-import java.util.List;
 
 public interface Observable {
 

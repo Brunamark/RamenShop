@@ -31,6 +31,7 @@ public class Pedido implements Observable {
 
     public void setEstado(EstadoPedido estadoPedido) {
         this.estado = estadoPedido;
+        notifyAllObserver();
     }
 
     public Long getId() {
