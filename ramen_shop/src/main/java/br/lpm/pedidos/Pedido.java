@@ -2,6 +2,8 @@ package br.lpm.pedidos;
 
 import java.util.ArrayList;
 import java.util.List;
+import br.lpm.Excecao.AdcionarAcrescimoErrado;
+import br.lpm.Excecao.AdicionarAscrecimoNulo;
 import br.lpm.acrescimos.Chili;
 import br.lpm.acrescimos.CremeAlho;
 import br.lpm.acrescimos.Crouton;
@@ -45,7 +47,10 @@ public class Pedido implements Observable {
         return prato.getDescricao(); 
     }
 
-    public void adicionarAcrescimo(String tipoDeAcrescimo) {
+    public void adicionarAcrescimo(String tipoDeAcrescimo) throws AdcionarAcrescimoErrado, AdicionarAscrecimoNulo {
+        if(tipoDeAcrescimo == null){
+            throw new AdicionarAscrecimoNulo();
+        }
         switch (tipoDeAcrescimo.toLowerCase()) {
             case "chili":
                 this.prato = new Chili(this.prato);
@@ -66,9 +71,9 @@ public class Pedido implements Observable {
                 this.prato = new Tofu(prato);
             break;
             default:
-            break;
-
+                throw new AdcionarAcrescimoErrado();
         }
+      
 
     }
 

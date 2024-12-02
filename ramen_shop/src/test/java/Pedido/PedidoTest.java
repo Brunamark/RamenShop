@@ -5,6 +5,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import br.lpm.pedidos.*;
 import br.lpm.items.*;
+import br.lpm.Excecao.AdcionarAcrescimoErrado;
+import br.lpm.Excecao.AdicionarAscrecimoNulo;
 import br.lpm.acrescimos.*;
 
 public class PedidoTest {
@@ -27,8 +29,15 @@ public class PedidoTest {
 
     @Test
     public void testAdicionarAcrescimo() {
-        pedido.adicionarAcrescimo("chili");
-        pedido.adicionarAcrescimo("creme alho");
+        try{
+            pedido.adicionarAcrescimo("chili");
+            pedido.adicionarAcrescimo("creme alho");
+        }catch(AdcionarAcrescimoErrado e){
+            System.out.println(e.getMessage());
+        }catch(AdicionarAscrecimoNulo e){
+            System.out.println(e.getMessage());
+        }
+       
 
         assertEquals("Ramen BasePorcoChiliCreme Alho", pedido.getDescricao());
         assertEquals(pratoBase.getPreco() + 2.5 + 1.5, pedido.getPrecoTotal(), 0.01);  

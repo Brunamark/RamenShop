@@ -5,6 +5,7 @@ import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import br.lpm.pedidos.*;
+import br.lpm.Excecao.PedidoNulo;
 import br.lpm.items.*;
 
 public class ListaDePedidosTest {
@@ -17,12 +18,19 @@ public class ListaDePedidosTest {
     public void setup() {
         listaDePedidos = ListaDePedidos.getInstance();
         listaDePedidos.getPedidos().clear(); 
-
         pedido1 = new Pedido(new Porco("Ramen Base", Tamanho.MEDIO));
         pedido2 = new Pedido(new Porco("Ramen Base", Tamanho.GRANDE));
+        try{
+       
 
-        listaDePedidos.adicionarPedido(pedido1);
-        listaDePedidos.adicionarPedido(pedido2);
+            listaDePedidos.adicionarPedido(pedido1);
+            listaDePedidos.adicionarPedido(pedido2);
+        }catch(PedidoNulo e){
+            System.out.println(e.getMessage());
+        }
+       
+
+      
     }
 
     @Test

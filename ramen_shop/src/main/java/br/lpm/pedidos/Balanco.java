@@ -2,17 +2,18 @@ package br.lpm.pedidos;
 
 import java.util.Collections;
 import java.util.List;
+import br.lpm.Excecao.QuantidadeZero;
 
 public class Balanco {
-    private Balanco instance = new Balanco();
+    private static final Balanco instance = new Balanco();
     private List<Pedido> pedidos;
     private Balanco(){
         ListaDePedidos listaDePedidos = ListaDePedidos.getInstance();
         pedidos = listaDePedidos.getPedidos();
     }
 
-    public Balanco getInstance(){
-        return this.instance;
+    public static Balanco getInstance(){
+        return instance;
         
     }
 
@@ -37,13 +38,12 @@ public class Balanco {
             .reduce(0.0,(acc,e)-> acc+e);
     }
 
-    public double getTicketMedio(){
+    public double getTicketMedio() throws QuantidadeZero{
         int quantidade = getQuantidade();
         double receitaTotal = getReceitaTotal();
         
-        // Evita divisão por zero
         if (quantidade == 0) {
-            return 0.0;
+            throw new QuantidadeZero();
         }
         
         return receitaTotal / quantidade;

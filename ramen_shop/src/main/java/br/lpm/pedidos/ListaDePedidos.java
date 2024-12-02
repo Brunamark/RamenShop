@@ -2,6 +2,7 @@ package br.lpm.pedidos;
 
 import java.util.ArrayList;
 import java.util.List;
+import br.lpm.Excecao.PedidoNulo;
 
 public class ListaDePedidos {
 
@@ -17,7 +18,10 @@ public class ListaDePedidos {
         return instance;
     }
 
-    public void adicionarPedido(Pedido pedido) {
+    public void adicionarPedido(Pedido pedido) throws PedidoNulo {
+        if(pedido == null){
+            throw new PedidoNulo();
+        }
         this.pedidos.add(pedido);
 
     }
