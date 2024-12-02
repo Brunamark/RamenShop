@@ -7,24 +7,24 @@ import br.lpm.items.Porco;
 import br.lpm.items.Prato;
 import br.lpm.items.Tamanho;
 
-public class Tofu {
-    private Prato pratoTofu;
+public class ShitakeTest {
+    private Prato pratoShitake;
     private Prato pratoSimples;
 
     @BeforeEach
     public void setup() {
         pratoSimples = new Porco("Ramen Base", Tamanho.GRANDE);
-        pratoTofu = new br.lpm.acrescimos.Tofu(pratoSimples);
+        pratoShitake = new br.lpm.acrescimos.Shitake(pratoSimples);
 
     }
 
     @Test
-    public void testTofuDescricao() {
-        assertEquals("Ramen BasePorcoTofu", pratoTofu.getDescricao());
+    public void testShitakeDescricao() {
+        assertEquals("Ramen BasePorcoShitake", pratoShitake.getDescricao());
     }
 
     @Test
-    public void testTofuPreco() {
-        assertEquals(24.5, pratoTofu.getPreco(), 0.01);
+    public void testShitakePreco() {
+        assertEquals(28.7, pratoShitake.getPreco(), 0.01);
     }
 }

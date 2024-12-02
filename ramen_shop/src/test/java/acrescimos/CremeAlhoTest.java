@@ -8,7 +8,7 @@ import br.lpm.items.Porco;
 import br.lpm.items.Prato;
 import br.lpm.items.Tamanho;
 
-public class CremeAlho {
+public class CremeAlhoTest {
     private Prato pratoComCremeAlho;
     private Prato pratoSimples;
 

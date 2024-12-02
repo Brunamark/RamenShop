@@ -7,7 +7,7 @@ import br.lpm.items.Prato;
 import br.lpm.items.Tamanho;
 import br.lpm.items.Vegano;
 
-public class Crouton {
+public class CroutonTest {
     private Prato pratoComCrouton;
     private Prato pratoSimples;
 

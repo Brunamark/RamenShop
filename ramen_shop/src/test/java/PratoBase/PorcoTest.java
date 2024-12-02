@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import br.lpm.items.Prato;
 import br.lpm.items.Tamanho;
 
-public class Porco {
+public class PorcoTest {
     private Prato pratoSimples;
 
     @BeforeEach

@@ -7,7 +7,7 @@ import br.lpm.items.Porco;
 import br.lpm.items.Prato;
 import br.lpm.items.Tamanho;
 
-public class ProteinaExtra {
+public class ProteinaExtraTest {
     private Prato pratoProteinaExtra;
     private Prato pratoSimples;
 

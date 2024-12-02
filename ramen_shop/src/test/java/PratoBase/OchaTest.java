@@ -8,23 +8,23 @@ import br.lpm.items.PratoBase;
 import br.lpm.items.Tamanho;
 import br.lpm.items.Porco;
 
-public class Refrigerante {
-      private PratoBase pratoSimples;  
-    private Bebida kocha;          
+public class OchaTest {
+    private PratoBase pratoSimples;
+    private Bebida kocha;
 
     @BeforeEach
     public void setup() {
         pratoSimples = new Porco("Ramen Base", Tamanho.GRANDE);
-        kocha = new br.lpm.items.Refrigerante(pratoSimples); 
+        kocha = new br.lpm.items.Ocha(pratoSimples);
     }
 
     @Test
     public void testKochaDescricao() {
-        assertEquals("Refrigerante", kocha.getDescricao());
+        assertEquals("O-cha", kocha.getDescricao());
     }
 
     @Test
     public void testKochaPreco() {
-        assertEquals(27.7, kocha.getPreco(), 0.01);
+        assertEquals(25.7, kocha.getPreco(), 0.01);
     }
 }
