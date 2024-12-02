@@ -41,6 +41,9 @@ public class Pedido implements Observable {
     public double getPrecoTotal() {
         return prato.getPreco();
     }
+    public String getDescricao() {
+        return prato.getDescricao(); 
+    }
 
     public void adicionarAcrescimo(String tipoDeAcrescimo) {
         switch (tipoDeAcrescimo.toLowerCase()) {

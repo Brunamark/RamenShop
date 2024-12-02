@@ -23,7 +23,7 @@ public class ListaDePedidos {
     }
 
     public List<Pedido> getPedidos() {
-        return pedidos;
+        return  pedidos != null ? pedidos : null;
     }
 
 

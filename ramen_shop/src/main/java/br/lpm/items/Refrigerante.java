@@ -6,7 +6,7 @@ public class Refrigerante extends Bebida{
         super(pratoBase);
     }
     public String getDescricao(){
-        return "Refigerante";
+        return "Refrigerante";
     }
     @Override
     public double getPreco(){
